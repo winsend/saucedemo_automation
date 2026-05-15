@@ -23,8 +23,8 @@ def test_checkout(driver):
     cart_page.click_checkout()
 
     checkout_page.fill_information(
-        "John",
-        "Doe",
+        "Vlad",
+        "frrrrrr",
         "12345"
     )
 

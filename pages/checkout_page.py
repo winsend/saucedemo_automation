@@ -35,6 +35,4 @@ class CheckoutPage:
         ).click()
 
     def get_success_text(self):
-        return self.driver.find_element(
-            *CheckoutPageLocators.SUCCESS_TEXT
-        ).text
+        return self.driver.find_element(*CheckoutPageLocators.SUCCESS_TEXT).text
