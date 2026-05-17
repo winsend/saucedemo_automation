@@ -21,3 +21,4 @@ class CheckoutPageLocators:
     CONTINUE_BUTTON = ("xpath", "//input[@id='continue']")
     FINISH_BUTTON = ("xpath", "//button[@id='finish']")
     SUCCESS_TEXT = ("xpath", "//h2[text()='Thank you for your order!']")
+

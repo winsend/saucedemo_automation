@@ -1,15 +1,11 @@
+from pages.base_page import BasePage
 from utils.locators import InventoryPageLocators
 
 
-class InventoryPage:
-
-    def __init__(self, driver):
-        self.driver = driver
+class InventoryPage(BasePage):
 
     def add_backpack_to_cart(self):
-        self.driver.find_element(
-            *InventoryPageLocators.ADD_BACKPACK
-        ).click()
+        self.click(*InventoryPageLocators.ADD_BACKPACK)
 
     def open_cart(self):
-        self.driver.find_element(*InventoryPageLocators.CART_ICON).click()
+        self.click(*InventoryPageLocators.CART_ICON)

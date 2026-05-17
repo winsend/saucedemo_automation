@@ -1,32 +1,18 @@
 from utils.locators import CheckoutPageLocators
+from pages.base_page import BasePage
 
-class CheckoutPage:
-
-    def __init__(self, driver):
-        self.driver = driver
+class CheckoutPage(BasePage):
 
     def fill_information(self, first_name, last_name, postal_code):
-        self.driver.find_element(
-            *CheckoutPageLocators.FIRST_NAME
-        ).send_keys(first_name)
-
-        self.driver.find_element(
-            *CheckoutPageLocators.LAST_NAME
-        ).send_keys(last_name)
-
-        self.driver.find_element(
-            *CheckoutPageLocators.POSTAL_CODE
-        ).send_keys(postal_code)
+        self.type(*CheckoutPageLocators.FIRST_NAME, first_name)
+        self.type(*CheckoutPageLocators.LAST_NAME, last_name)
+        self.type(*CheckoutPageLocators.POSTAL_CODE, postal_code)
 
     def continue_checkout(self):
-        self.driver.find_element(
-            *CheckoutPageLocators.CONTINUE_BUTTON
-        ).click()
+        self.click(*CheckoutPageLocators.CONTINUE_BUTTON)
 
     def finish_checkout(self):
-        self.driver.find_element(
-            *CheckoutPageLocators.FINISH_BUTTON
-        ).click()
+        self.click(*CheckoutPageLocators.FINISH_BUTTON)
 
     def get_success_text(self):
-        return self.driver.find_element(*CheckoutPageLocators.SUCCESS_TEXT).text
+        return self.get_text(*CheckoutPageLocators.SUCCESS_TEXT)

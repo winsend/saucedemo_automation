@@ -1,10 +1,7 @@
 from utils.locators import CartPageLocators
+from pages.base_page import BasePage
 
-class CartPage:
-
-
-    def __init__(self, driver):
-        self.driver = driver
+class CartPage(BasePage):
 
     def click_checkout(self):
-        self.driver.find_element(*CartPageLocators.CHECKOUT_BUTTON).click()
+        self.click(*CartPageLocators.CHECKOUT_BUTTON)
