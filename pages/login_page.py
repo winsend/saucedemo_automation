@@ -9,6 +9,9 @@ class LoginPage(BasePage):
         self.open(self.URL)
 
     def login(self, username, password):
-        self.type(*LoginPageLocators.USERNAME)
-        self.type(*LoginPageLocators.PASSWORD)
-        self.click(*LoginPageLocators.LOGIN_BUTTON)
+        self.type(LoginPageLocators.USERNAME, username)
+        self.type(LoginPageLocators.PASSWORD, password)
+        self.click(LoginPageLocators.LOGIN_BUTTON)
+
+    def get_error_message(self):
+        return self.get_text(LoginPageLocators.ERROR_MESSAGE)

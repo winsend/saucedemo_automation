@@ -3,7 +3,7 @@ class LoginPageLocators:
     USERNAME = ("xpath", "//input[@id='user-name']")
     PASSWORD = ("xpath", "//input[@id='password']")
     LOGIN_BUTTON = ("xpath", "//input[@id='login-button']")
-
+    ERROR_MESSAGE = ("xpath", "//h3[@data-test='error']")
 
 class InventoryPageLocators:
     ADD_BACKPACK = ("xpath", "//button[@id='add-to-cart-sauce-labs-backpack']")
@@ -21,4 +21,3 @@ class CheckoutPageLocators:
     CONTINUE_BUTTON = ("xpath", "//input[@id='continue']")
     FINISH_BUTTON = ("xpath", "//button[@id='finish']")
     SUCCESS_TEXT = ("xpath", "//h2[text()='Thank you for your order!']")
-
