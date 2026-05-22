@@ -36,12 +36,12 @@ git clone https://github.com/winsend/saucedemo_automation.git
 cd saucedemo_automation
 ```
 
-2. Установить зависимости
+### 2. Установить зависимости
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Запуск тестов
+### 3. Запуск тестов
 ```bash
 # Обычный запуск
 pytest
@@ -52,12 +52,13 @@ pytest -n auto
 # Запуск с генерацией Allure отчёта
 pytest --alluredir=allure-results -n auto
 ```
-4. Просмотр Allure отчёта
+### 4. Просмотр Allure отчёта
 ```bash
 allure serve allure-results
 ```
 
 Структура проекта
+```bash
 saucedemo_automation/
 ├── pages/              # Page Object классы
 ├── tests/              # Тестовые сценарии
@@ -65,6 +66,6 @@ saucedemo_automation/
 ├── conftest.py         # Fixtures и настройки
 ├── requirements.txt
 └── README.md
-
+```
 Автор: Влад Лизогуб
 Статус: Учебный проект / Портфолио Junior AQA Engineer
