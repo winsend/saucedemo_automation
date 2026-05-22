@@ -57,15 +57,21 @@ pytest --alluredir=allure-results -n auto
 allure serve allure-results
 ```
 
-Структура проекта
-```bash
+## Структура проекта
+
+```text
 saucedemo_automation/
 ├── pages/              # Page Object классы
 ├── tests/              # Тестовые сценарии
 ├── utils/              # Локаторы и вспомогательные функции
 ├── conftest.py         # Fixtures и настройки
 ├── requirements.txt
+├── .gitignore
 └── README.md
 ```
-Автор: Влад Лизогуб
-Статус: Учебный проект / Портфолио Junior AQA Engineer
+
+### Автор 
+Влад Лизогуб
+
+### Статус 
+Учебный проект / Портфолио Junior AQA Engineer
