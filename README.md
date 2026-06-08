@@ -1,6 +1,6 @@
 # SauceDemo UI Automation
 
-**Первый проект** по автоматизации тестирования на Python.
+Проект по автоматизации тестирования на Python.
 
 UI Automation фреймворк для тестирования демо-приложения **SauceDemo** с использованием **Page Object Model (POM)**.
 

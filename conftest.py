@@ -14,7 +14,6 @@ def driver():
     )
 
     driver.maximize_window()
-    driver.implicitly_wait(10)
 
     yield driver
 
@@ -31,8 +30,8 @@ def pytest_runtest_makereport(item, call):
             if driver:
                 allure.attach(
                     driver.get_screenshot_as_png(),
-                    name="Скриншот ошибки",
-                    attachment_type=AttachmentType.PNG
+                    name = "Скриншот ошибки",
+                    attachment_type = AttachmentType.PNG
                 )
         except Exception as e:
             print(f"Не удалось сделать скриншот: {e}")
